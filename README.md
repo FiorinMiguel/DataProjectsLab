@@ -5,7 +5,7 @@
 • Data processing & ETL pipelines  
 • SQL analysis & complex queries
 • Data visualization & storytelling
-• Machine learning experiments
+• Big data techniques for limited hardware
 • Real-world project case studies
 
 ### Tech: R | SQL | Python | SQLite | ggplot2 | Shiny
