@@ -1,20 +1,18 @@
 # IMDb Data Processing
 
-> Processamento de 88M+ registros com R + SQLite
+> Processamento de 88M+ registros com R + SQLite + Chunking
 
-## Features
-- **88 milhões** de registros processados
-- Técnicas de **chunking** para otimização de memória
-- Banco **SQLite** para consultas eficientes
-- Processamento em máquina com **8GB RAM**
+## Resultados
+- **88.359.623** registros processados
+- **3.8GB** de dados transformados  
+- **0 travamentos** com 8GB RAM
+- Banco **SQLite** otimizado
 
-## Result
-- ✅ 3.8GB de dados processados
-- ✅ Zero travamentos
-- ✅ Banco pronto para análise
+## Tech
+`R` `SQLite` `RSQLite` `readr` `Chunking`
 
-## Tech Stack
-`R` `SQLite` `RSQLite` `readr`
+## Download
+[![Google Drive](https://img.shields.io/badge/🗃️_IMDB.db_(4.1GB)-4285F4?style=for-the-badge)](https://drive.google.com/drive/folders/1ccBQFQNY67_s6kYwD3JioiZ3VHNv7K-N?usp=drive_link)
 
----
-**Arquivos**: `criacao_banco_sqlite.qmd` | `IMDB.db`
+## Arquivos
+- `criacao_banco_sqlite.qmd` - Pipeline completo de ETL
