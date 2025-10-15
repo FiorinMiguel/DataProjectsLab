@@ -8,4 +8,4 @@
 • Big data techniques for limited hardware
 • Real-world project case studies
 
-### Tech: R | SQL | Python | SQLite | ggplot2 | Shiny
+### Tech: R | SQL | Python | SQLite | ggplot2 
