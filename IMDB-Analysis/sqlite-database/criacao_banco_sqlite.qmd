@@ -1,0 +1,74 @@
+---
+title: "Desafio13"
+format: html
+editor: visual
+---
+
+# **Laboratório: SQLite com Polars**
+
+## Carregando pacotes necessários e criando um arquivo para o banco de dados SQLite
+
+```{r}
+library(RSQLite)
+library(readr)
+
+conn <- dbConnect(SQLite(), "IMDB.db")
+```
+
+## Adicionando as tabelas "basics", "ratings", "principals" à base de dados
+
+### Basics (11144943 linhas - verificado via terminal)
+
+```{r}
+chunk_size <- 20000
+
+callback <- function(x, pos){
+  dbWriteTable(conn, "basics", x, append = TRUE)
+  gc()
+}
+
+read_tsv_chunked(
+  "title.basics0.tsv", 
+  callback = DataFrameCallback$new(callback),
+  chunk_size = chunk_size
+  )
+
+dbGetQuery(conn, "SELECT COUNT(*) FROM basics")
+```
+
+Portanto, processamento concluído com sucesso.
+
+### Ratings (1484616 linhas)
+
+Visto que o tamanho do arquivo é 26 MB, não é necessário o uso de chunks.
+
+```{r}
+dbWriteTable(conn, 'ratings', "title.ratings.tsv" )
+dbGetQuery(conn, "SELECT COUNT(*) FROM ratings")
+```
+
+Logo, processamento realizado com sucesso.
+
+### Principals (88.359.623 linhas)
+
+```{r}
+chunk_size <- 10000
+
+callback <- function(x, pos){
+  dbWriteTable(conn, 'principals', x, append = TRUE)
+  gc()
+}
+
+read_tsv_chunked(
+  "title.principals0.tsv",
+  DataFrameCallback$new(callback),
+  chunk_size = chunk_size
+)
+dbGetQuery(conn, "SELECT COUNT(*) FROM principals")
+```
+
+logo, as três tabelas foram registradas na base de dados
+
+```{r}
+dbDisconnect(conn)
+```
