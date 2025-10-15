@@ -17,4 +17,4 @@
 `R` `SQLite` `RSQLite` `readr`
 
 ---
-**Arquivos**: `data_processing.qmd` | `IMDB.db`
+**Arquivos**: `criacao_banco_sqlite.qmd` | `IMDB.db`
