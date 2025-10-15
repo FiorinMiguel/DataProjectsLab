@@ -12,7 +12,7 @@
 `R` `SQLite` `RSQLite` `readr` `Chunking`
 
 ## Download
-[![Google Drive](https://img.shields.io/badge/🗃️_IMDB.db_(4.1GB)-4285F4?style=for-the-badge)](https://drive.google.com/drive/folders/1ccBQFQNY67_s6kYwD3JioiZ3VHNv7K-N?usp=drive_link)
+[![Google Drive](https://img.shields.io/badge/🗃️_IMDB.db_(4.5GB)-4285F4?style=for-the-badge)](https://drive.google.com/drive/folders/1ccBQFQNY67_s6kYwD3JioiZ3VHNv7K-N?usp=drive_link)
 
 ## Arquivos
 - `criacao_banco_sqlite.qmd` - Pipeline completo de ETL
