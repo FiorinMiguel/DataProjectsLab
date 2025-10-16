@@ -25,4 +25,5 @@ Durante a importação dos arquivos originais da IMDb, foi identificado que o ar
 Para padronizar o formato e garantir a leitura correta no R, foi aplicado o seguinte comando no Ubuntu:
 
 ```bash
-awk '{$1=$1}1' OFS='\t' title.ratings.tsv > title.ratings_fixed.tsv
+awk '{$1=$1}1' OFS='\t' title.ratings.tsv > tmp && mv tmp title.ratings.tsv
+
