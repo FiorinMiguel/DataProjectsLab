@@ -43,7 +43,7 @@ Análise exploratória do banco de dados IMDB (Internet Movie Database) desenvol
 
 - `analise_imdb.ipynb` - Jupyter Notebook com análise completa
 - `analise_imdb.html` - Versão HTML do notebook
-- `IMDB.db` - Banco de dados (não incluído)
+- [IMDB.db](https://drive.google.com/file/d/1sb1hbA8Eij1XDFPp1iigtaArVJu_b4IY/view?usp=drive_link) - Banco de dados (disponível no Google Drive)
 - `README.md` - Documentação
 
 ## Como Executar
