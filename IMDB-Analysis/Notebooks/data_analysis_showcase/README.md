@@ -1,43 +1,53 @@
-# IMDB Data Analysis
+# Exploração de Dados com SQL - IMDB
 
-Analysis of IMDB dataset using SQL and Python.
+## Descrição
 
-## 📊 Analysis Overview
+Análise exploratória do banco de dados IMDB (Internet Movie Database) desenvolvida para o laboratório da disciplina ME315. O projeto investiga padrões em filmes, avaliações e participantes através de consultas SQL e análise de dados em Python.
 
-This project explores the IMDB database to identify top-rated movies, popular genres, and most frequent actors in highly-rated productions.
+## Objetivos
 
-## 🎯 Key Analyses
+- Explorar a estrutura do banco de dados IMDB
+- Identificar os filmes melhor avaliados
+- Analisar distribuição de gêneros em filmes de alta avaliação
+- Descobrir atores/atrizes mais frequentes em filmes bem avaliados
 
-### 1. Top Rated Movies
-**Query:** Find 5 highest-rated movies with vote count as tie-breaker
+## Estrutura do Banco de Dados
 
-**Results:**
-- "Ozymandias" - ⭐ 10.0 (228,900 votes)
-- "Kadifeyi Kesfet" - ⭐ 10.0 (2,904 votes)
-- "Tatilde CUK Oturur Mukemmel Durur" - ⭐ 10.0 (2,878 votes)
+**Tabelas principais:**
+- `basics`: Informações básicas dos títulos
+- `ratings`: Avaliações dos usuários
+- `principals`: Relação entre títulos e participantes
 
-### 2. Most Frequent High-Rated Genre
-**Method:** Genre count for movies rated > 8.0
+## Análises Realizadas
 
-**Finding:** **Drama** dominates with 108,356 occurrences
+1. **Top 5 Filmes Melhor Avaliados**
+   - Critério inicial: maior averageRating
+   - Critério refinado: averageRating + numVotes > 100.000
 
-### 3. Most Active Actors in Quality Films
-**Query:** Actors with most appearances in movies rated > 7.5
+2. **Gênero Mais Frequente em Filmes com Nota > 8**
+   - Análise de distribuição de gêneros
+   - Investigação de fatores que influenciam avaliações
 
-**Top Performers:**
-- Actor 1: 4,027 participations
-- Actor 2: 3,792 participations  
-- Actor 3: 2,801 participations
+3. **Atores/Atrizes em Filmes com Nota > 7.5**
+   - Contagem de participações em filmes bem avaliados
 
-## Technical Stack
+## Tecnologias Utilizadas
 
-- **Python** + **Pandas** for data analysis
-- **SQL** for database queries
-- **SQLite** as database management system
+- Python 3
+- SQLite
+- pandas
+- Jupyter Notebook
+- SQL
 
-## Files
+## Arquivos
 
-- `imdb_sql_analysis.ipynb` - Main analysis notebook
-- `imdb_sql_analysis.html` - Exported notebook for quick viewing
+- `analise_imdb.ipynb` - Jupyter Notebook com análise completa
+- `analise_imdb.html` - Versão HTML do notebook
+- `IMDB.db` - Banco de dados (não incluído)
+- `README.md` - Documentação
 
+## Como Executar
 
+1. Instalar dependências:
+```bash
+pip install pandas sqlite3 jupyter
